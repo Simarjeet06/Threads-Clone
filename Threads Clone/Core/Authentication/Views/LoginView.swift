@@ -57,9 +57,9 @@ struct LoginView: View {
             
             Divider()
             
-            NavigationLink(destination : RegistrationView()) {
-               
-                
+            NavigationLink{
+                RegistrationView().navigationBarBackButtonHidden(true)
+            } label:{
                 HStack(spacing:3){
                     Text("Don't have an account?")
                     Text("Sign Up")
@@ -67,10 +67,10 @@ struct LoginView: View {
                 }
                 .foregroundColor(Color.black)
                 .font(.footnote)
-                
+            }
 
             .padding(.vertical,16)
-        }
+        
         }
     }
 }
